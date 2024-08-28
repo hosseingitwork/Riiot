@@ -1,6 +1,4 @@
-import { useState, useRef, useCallback, useMemo, useEffect } from "react";
-import { Card_info } from "../types";
-import { useInfiniteQuery } from "@tanstack/react-query";
+import { useState, useEffect } from "react";
 import Comment from "../components/Comment";
 
 
@@ -54,11 +52,10 @@ const Comments = () => {
     console.log('fetchProfileAndFacts ->', comments)
 
 return (
-    <div>
-        Comments section
+    <div className="flex items-center justify-center">
         { comments ? 
-        <div>
-
+        <div className="w-4/5">
+        Comments section
             {
                 comments.map(
                     (comment:any) => {
